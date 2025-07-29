@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evaluación Feria</title>
+  <style>
+    body { font-family: Arial; margin: 20px; background: #f4f4f4; }
+    h1, h2 { color: #333; }
+    form { background: white; padding: 20px; border-radius: 8px; }
+    .category { margin-bottom: 20px; }
+    .item { margin-bottom: 10px; }
+    label { display: block; margin-bottom: 5px; }
+    select, input[type=number] { width: 100%; padding: 6px; }
+  </style>
+</head>
+<body>
+  <h1>Formulario de Evaluación</h1>
+  <form id="evaluationForm">
+    <div class="item">
+      <label for="grupo">Grupo:</label>
+      <select id="grupo" name="grupo" required>
+        <option value="">Seleccione un grupo</option>
+        <option>LOS PIVOTES</option>
+        <option>Caza Ofertas</option>
+        <option>Que paso ayer</option>
+        <option>Proyecto Morita</option>
+        <option>InduSistemas</option>
+        <option>STARK</option>
+        <option>GENESIS</option>
+        <option>LA TRIBU</option>
+        <option>DEV-IN</option>
+        <option>LOS YUCAS</option>
+        <option>DRINKMON</option>
+        <option>STITCH'S BARKERY</option>
+        <option>TECNO FUSION</option>
+        <option>NOT STONKS</option>
+        <option>LOS NUEVOS TESLAS</option>
+        <option>LOS REZAGADITOS</option>
+      </select>
+    </div>
+
+    <div class="item">
+      <label for="jurado">Jurado:</label>
+      <select id="jurado" name="jurado" required>
+        <option value="">Seleccione un jurado</option>
+        <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+      </select>
+    </div>
+
+    <div class="category">
+      <h2>Marketing Digital</h2>
+      <div class="item"><label>Página Web</label><input type="number" name="pagina_web" min="0" max="10" required /></div>
+      <div class="item"><label>Desarrollo de Contenidos</label><input type="number" name="contenido" min="0" max="10" required /></div>
+      <div class="item"><label>Visualizaciones de TikTok</label><input type="number" name="tiktok" min="0" max="10" required /></div>
+    </div>
+
+    <div class="category">
+      <h2>Informe</h2>
+      <div class="item"><label>Aplicación del modelo matemático</label><input type="number" name="modelo" min="0" max="10" required /></div>
+      <div class="item"><label>Estructura de costos</label><input type="number" name="costos" min="0" max="10" required /></div>
+      <div class="item"><label>Orden y limpieza</label><input type="number" name="orden_informe" min="0" max="10" required /></div>
+    </div>
+
+    <div class="category">
+      <h2>Producto</h2>
+      <div class="item"><label>Merchandising</label><input type="number" name="merch" min="0" max="10" required /></div>
+      <div class="item"><label>Presentación del producto</label><input type="number" name="presentacion" min="0" max="10" required /></div>
+      <div class="item"><label>Ventas realizadas</label><input type="number" name="ventas" min="0" max="10" required /></div>
+    </div>
+
+    <div class="category">
+      <h2>Stand</h2>
+      <div class="item"><label>Originalidad</label><input type="number" name="originalidad" min="0" max="10" required /></div>
+      <div class="item"><label>Iniciativa en captación de clientes</label><input type="number" name="iniciativa" min="0" max="10" required /></div>
+      <div class="item"><label>Orden y limpieza</label><input type="number" name="orden_stand" min="0" max="10" required /></div>
+      <div class="item"><label>Tapado del fondo del toldo</label><input type="number" name="fondo_toldo" min="0" max="10" required /></div>
+      <div class="item"><label>Superficie del toldo</label><input type="number" name="superficie_toldo" min="0" max="10" required /></div>
+    </div>
+
+    <button type="submit">Enviar Evaluación</button>
+  </form>
+
+  <script>
+    document.getElementById("evaluationForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Evaluación enviada correctamente (conexión a backend pendiente)");
+    });
+  </script>
+</body>
+</html>
