@@ -1,40 +1,151 @@
-<form method="POST" action="/guardar-evaluacion">
-  <div class="item">
-    <label for="pagina_web">Página Web: <output id="pagina_web_valor">5</output></label>
-    <input type="range" id="pagina_web" name="pagina_web" min="0" max="10" value="5"
-      oninput="pagina_web_valor.value = this.value" required>
-  </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evaluación Feria</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Formulario de Evaluación</h1>
+  <form id="evaluationForm">
+    <div class="item">
+      <label for="grupo">Grupo:</label>
+      <select id="grupo" name="grupo" required>
+        <option value="">Seleccione un grupo</option>
+        <option>LOS PIVOTES</option>
+        <option>Caza Ofertas</option>
+        <option>Que paso ayer</option>
+        <option>Proyecto Morita</option>
+        <option>InduSistemas</option>
+        <option>STARK</option>
+        <option>GENESIS</option>
+        <option>LA TRIBU</option>
+        <option>DEV-IN</option>
+        <option>LOS YUCAS</option>
+        <option>DRINKMON</option>
+        <option>STITCH'S BARKERY</option>
+        <option>TECNO FUSION</option>
+        <option>NOT STONKS</option>
+        <option>LOS NUEVOS TESLAS</option>
+        <option>LOS REZAGADITOS</option>
+      </select>
+    </div>
 
-  <div class="item">
-    <label for="modulo_gestion">Módulo de Gestión: <output id="modulo_gestion_valor">5</output></label>
-    <input type="range" id="modulo_gestion" name="modulo_gestion" min="0" max="10" value="5"
-      oninput="modulo_gestion_valor.value = this.value" required>
-  </div>
+    <div class="item">
+      <label for="jurado">Jurado:</label>
+      <select id="jurado" name="jurado" required>
+        <option value="">Seleccione un jurado</option>
+        <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+      </select>
+    </div>
 
-  <div class="item">
-    <label for="planificacion_scrum">Planificación SCRUM: <output id="planificacion_scrum_valor">5</output></label>
-    <input type="range" id="planificacion_scrum" name="planificacion_scrum" min="0" max="10" value="5"
-      oninput="planificacion_scrum_valor.value = this.value" required>
-  </div>
+    <div class="category">
+      <h2>Marketing Digital</h2>
+      <div class="item">
+        <label>Página Web</label>
+        <input type="range" name="pagina_web" min="0" max="10" value="0" required oninput="this.nextElementSibling.value = this.value"/>
+        <output>0</output>
+      </div>
+      <div class="item">
+        <label>Desarrollo de Contenidos</label>
+        <input type="range" name="contenido" min="0" max="10" value="0" required oninput="this.nextElementSibling.value = this.value"/>
+        <output>0</output>
+      </div>
+      <div class="item">
+        <label>Visualizaciones de TikTok</label>
+        <input type="range" name="tiktok" min="0" max="10" value="0" required oninput="this.nextElementSibling.value = this.value"/>
+        <output>0</output>
+      </div>
+    </div>
 
-  <div class="item">
-    <label for="defensa">Defensa: <output id="defensa_valor">5</output></label>
-    <input type="range" id="defensa" name="defensa" min="0" max="10" value="5"
-      oninput="defensa_valor.value = this.value" required>
-  </div>
+    <div class="category">
+      <h2>Informe</h2>
+      <div class="item">
+        <label>Aplicación del modelo matemático</label>
+        <input type="range" name="modelo" min="0" max="10" value="0" required oninput="this.nextElementSibling.value = this.value"/>
+        <output>0</output>
+      </div>
+      <div class="item">
+        <label>Estructura de costos</label>
+        <input type="range" name="costos" min="0" max="10" value="0" required oninput="this.nextElementSibling.value = this.value"/>
+        <output>0</output>
+      </div>
+      <div class="item">
+        <label>Orden y limpieza</label>
+        <input type="range" name="orden_informe" min="0" max="10" value="0" required oninput="this.nextElementSibling.value = this.value"/>
+        <output>0</output>
+      </div>
+    </div>
 
-  <div class="item">
-    <label for="presentacion">Presentación: <output id="presentacion_valor">5</output></label>
-    <input type="range" id="presentacion" name="presentacion" min="0" max="10" value="5"
-      oninput="presentacion_valor.value = this.value" required>
-  </div>
+    <div class="category">
+      <h2>Producto</h2>
+      <div class="item">
+        <label>Merchandising</label>
+        <input type="range" name="merch" min="0" max="10" value="0" required oninput="this.nextElementSibling.value = this.value"/>
+        <output>0</output>
+      </div>
+      <div class="item">
+        <label>Presentación del producto</label>
+        <input type="range" name="presentacion" min="0" max="10" value="0" required oninput="this.nextElementSibling.value = this.value"/>
+        <output>0</output>
+      </div>
+      <div class="item">
+        <label>Ventas realizadas</label>
+        <input type="range" name="ventas" min="0" max="10" value="0" required oninput="this.nextElementSibling.value = this.value"/>
+        <output>0</output>
+      </div>
+    </div>
 
-  <div class="item">
-    <label for="preguntas">Preguntas: <output id="preguntas_valor">5</output></label>
-    <input type="range" id="preguntas" name="preguntas" min="0" max="10" value="5"
-      oninput="preguntas_valor.value = this.value" required>
-  </div>
+    <div class="category">
+      <h2>Stand</h2>
+      <div class="item">
+        <label>Originalidad</label>
+        <input type="range" name="originalidad" min="0" max="10" value="0" required oninput="this.nextElementSibling.value = this.value"/>
+        <output>0</output>
+      </div>
+      <div class="item">
+        <label>Iniciativa en captación de clientes</label>
+        <input type="range" name="iniciativa" min="0" max="10" value="0" required oninput="this.nextElementSibling.value = this.value"/>
+        <output>0</output>
+      </div>
+      <div class="item">
+        <label>Orden y limpieza</label>
+        <input type="range" name="orden_stand" min="0" max="10" value="0" required oninput="this.nextElementSibling.value = this.value"/>
+        <output>0</output>
+      </div>
+      <div class="item">
+        <label>Tapado del fondo del toldo</label>
+        <input type="range" name="fondo_toldo" min="0" max="10" value="0" required oninput="this.nextElementSibling.value = this.value"/>
+        <output>0</output>
+      </div>
+      <div class="item">
+        <label>Superficie del toldo</label>
+        <input type="range" name="superficie_toldo" min="0" max="10" value="0" required oninput="this.nextElementSibling.value = this.value"/>
+        <output>0</output>
+      </div>
+    </div>
 
-  <button type="submit">Guardar Evaluación</button>
-</form>
+    <button type="submit">Enviar Evaluación</button>
+  </form>
 
+  <script>
+document.getElementById("evaluationForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+  const formData = Object.fromEntries(new FormData(this));
+  const response = await fetch('http://localhost:3000/evaluacion', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(formData)
+  });
+  if (response.ok) {
+    alert("Evaluación enviada correctamente");
+    this.reset();
+    document.querySelectorAll("output").forEach(o => o.value = 0);
+  } else {
+    alert("Error al enviar la evaluación");
+  }
+});
+</script>
+</body>
+</html>
