@@ -1,0 +1,115 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+  min-height: 100vh;
+}
+h1 {
+  color: #2d3a4b;
+  text-align: center;
+  margin-top: 40px;
+  letter-spacing: 2px;
+  font-size: 2.2rem;
+}
+form {
+  background: #fff;
+  max-width: 600px;
+  margin: 40px auto 0 auto;
+  padding: 32px 28px 24px 28px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.13);
+  border: 1px solid #e6e6e6;
+}
+.category {
+  margin-bottom: 32px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.category:last-child {
+  border-bottom: none;
+}
+h2 {
+  color: #0078d7;
+  margin-bottom: 18px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+.item {
+  margin-bottom: 18px;
+}
+label {
+  display: block;
+  margin-bottom: 7px;
+  color: #34495e;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+select, input[type=number] {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 7px;
+  border: 1px solid #cfd8dc;
+  background: #f7fafc;
+  font-size: 1rem;
+  transition: border 0.2s;
+  margin-bottom: 4px;
+}
+select:focus, input[type=number]:focus {
+  border: 1.5px solid #0078d7;
+  outline: none;
+  background: #fff;
+}
+input[type=range] {
+  width: 100%;
+  accent-color: #0078d7;
+  margin: 0;
+  height: 4px;
+  background: #e3eaf1;
+  border-radius: 4px;
+  outline: none;
+  transition: accent-color 0.2s;
+}
+input[type=range]:focus {
+  accent-color: #005fa3;
+}
+output {
+  display: inline-block;
+  min-width: 32px;
+  margin-left: 10px;
+  font-weight: bold;
+  color: #0078d7;
+  background: #f0f7ff;
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-size: 1rem;
+  vertical-align: middle;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+button[type=submit] {
+  width: 100%;
+  background: linear-gradient(90deg, #0078d7 0%, #00c6fb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,120,215,0.08);
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 18px;
+}
+button[type=submit]:hover {
+  background: linear-gradient(90deg, #005fa3 0%, #00a6d7 100%);
+  transform: translateY(-2px) scale(1.01);
+}
+@media (max-width: 700px) {
+  form {
+    max-width: 98vw;
+    padding: 18px 6vw 18px 6vw;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
